@@ -1,4 +1,4 @@
-package ua.lviv.iot.electrical.devices.models;
+package ua.lviv.iot.home.electrical.devices.models;
 
 public enum KettleBodyMatherial {
 
