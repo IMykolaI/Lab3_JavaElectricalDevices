@@ -9,8 +9,7 @@ public interface IHomeElectricalDeviceManager {
     double calculatePowerConsumprion();
     void turnOn(HomeElectricalDevice Device);
     void turnOff(HomeElectricalDevice device);
-    List<HomeElectricalDevice> sortByPowerConsumption(List<HomeElectricalDevice> homeElectricalDevicesList,
-                                                      boolean sortOrder);
-    List<HomeElectricalDevice> sortByNameOfDevice(List<HomeElectricalDevice> homeElectricalDevicesList,
-                                                  boolean sortOrder);
+    List<HomeElectricalDevice> sortByPowerConsumption(boolean sortOrder);
+    List<HomeElectricalDevice> sortByNameOfDevice(boolean sortOrder);
+    void printList(List<HomeElectricalDevice> homeElectricalDeviceList);
 }
