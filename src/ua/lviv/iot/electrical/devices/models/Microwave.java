@@ -1,18 +1,18 @@
-package ua.lviv.iot.home.electrical.devices.models;
+package ua.lviv.iot.electrical.devices.models;
 
 public class Microwave extends HomeElectricalDevice {
 
     private ControlType controlType;
-    private double turntableDiametr;
+    private double diametrOfTheTurntable;
 
     public Microwave() {
     }
 
     public Microwave(String nameOfDevice, boolean isTurnedOn, double power, double volume, double weight,
-                     Purpose purpose, ControlType controlType, double turntableDiametr) {
+                     Purpose purpose, ControlType controlType, double diametrOfTheTurntable) {
         super(nameOfDevice, isTurnedOn, power, volume, weight, purpose);
         this.controlType = controlType;
-        this.turntableDiametr = turntableDiametr;
+        this.diametrOfTheTurntable = diametrOfTheTurntable;
     }
 
     public ControlType getControlType() {
@@ -23,11 +23,11 @@ public class Microwave extends HomeElectricalDevice {
         this.controlType = controlType;
     }
 
-    public double getTurntableDiametr() {
-        return turntableDiametr;
+    public double getDiametrOfTheTurntable() {
+        return diametrOfTheTurntable;
     }
 
-    public void setTurntableDiametr(double turntableDiametr) {
-        this.turntableDiametr = turntableDiametr;
+    public void setDiametrOfTheTurntable(double diametrOfTheTurntable) {
+        this.diametrOfTheTurntable = diametrOfTheTurntable;
     }
 }
