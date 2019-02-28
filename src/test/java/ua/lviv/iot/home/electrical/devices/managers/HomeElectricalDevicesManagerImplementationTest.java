@@ -24,50 +24,50 @@ class HomeElectricalDevicesManagerImplementationTest {
 	@BeforeEach
 	public void initList() {
 
-		Fridge obj1 = new Fridge();
-		obj1.setNameOfDevice("Samsung");
-		obj1.setTurnedOn(false);
-		obj1.setPower(80.0);
-		obj1.setVolume(60.0);
-		obj1.setWeight(50.0);
-		obj1.setPurpose(Purpose.FOOD_STORAGING);
-		obj1.setNumberOfCameras(2);
-		obj1.setNumberOfShelves(8);
+		Fridge fridge1 = new Fridge();
+		fridge1.setNameOfDevice("Samsung");
+		fridge1.setTurnedOn(false);
+		fridge1.setPower(80.0);
+		fridge1.setVolume(60.0);
+		fridge1.setWeight(50.0);
+		fridge1.setPurpose(Purpose.FOOD_STORAGING);
+		fridge1.setNumberOfCameras(2);
+		fridge1.setNumberOfShelves(8);
 
-		Fridge obj2 = new Fridge("Elenberg", true, 60.0, 30.0, 15.0, Purpose.FOOD_STORAGING, 1, 5);
+		Fridge fridge2 = new Fridge("Elenberg", true, 60.0, 30.0, 15.0, Purpose.FOOD_STORAGING, 1, 5);
 
-		Microwave obj3 = new Microwave();
-		obj3.setNameOfDevice("Bosch");
-		obj3.setTurnedOn(false);
-		obj3.setPower(40.0);
-		obj3.setVolume(20.0);
-		obj3.setWeight(3.0);
-		obj3.setPurpose(Purpose.COOKING);
-		obj3.setControlType(ControlType.ELECTRONIC);
-		obj3.setTurntableDiametr(28.0);
+		Microwave microwave1 = new Microwave();
+		microwave1.setNameOfDevice("Bosch");
+		microwave1.setTurnedOn(false);
+		microwave1.setPower(40.0);
+		microwave1.setVolume(20.0);
+		microwave1.setWeight(3.0);
+		microwave1.setPurpose(Purpose.COOKING);
+		microwave1.setControlType(ControlType.ELECTRONIC);
+		microwave1.setTurntableDiametr(28.0);
 
-		Microwave obj4 = new Microwave("Panasonic", true, 10.0, 19.0, 2.5, Purpose.COOKING, ControlType.MECHANICAL,
+		Microwave microwave2 = new Microwave("Panasonic", true, 10.0, 19.0, 2.5, Purpose.COOKING, ControlType.MECHANICAL,
 				19.0);
 
-		ElectricalKettle obj5 = new ElectricalKettle();
-		obj5.setNameOfDevice("Electrolux");
-		obj5.setTurnedOn(false);
-		obj5.setPower(15.0);
-		obj5.setVolume(3.0);
-		obj5.setWeight(2.0);
-		obj5.setPurpose(Purpose.HEATING);
-		obj5.setBodyMatherial(KettleBodyMatherial.GLASS);
-		obj5.setNumberOfWalls(2);
+		ElectricalKettle electricalKettle1 = new ElectricalKettle();
+		electricalKettle1.setNameOfDevice("Electrolux");
+		electricalKettle1.setTurnedOn(false);
+		electricalKettle1.setPower(15.0);
+		electricalKettle1.setVolume(3.0);
+		electricalKettle1.setWeight(2.0);
+		electricalKettle1.setPurpose(Purpose.HEATING);
+		electricalKettle1.setBodyMatherial(KettleBodyMatherial.GLASS);
+		electricalKettle1.setNumberOfWalls(2);
 
-		HomeElectricalDevice obj6 = new ElectricalKettle("Tefal", true, 5.0, 2.0, 1.0, Purpose.COOKING,
+		HomeElectricalDevice electricalKettle2 = new ElectricalKettle("Tefal", true, 5.0, 2.0, 1.0, Purpose.COOKING,
 				KettleBodyMatherial.METAL_AND_PLASTIC, 2);
 
-		testList.add(obj1);
-		testList.add(obj2);
-		testList.add(obj3);
-		testList.add(obj4);
-		testList.add(obj5);
-		testList.add(obj6);
+		testList.add(fridge1);
+		testList.add(fridge2);
+		testList.add(microwave1);
+		testList.add(microwave2);
+		testList.add(electricalKettle1);
+		testList.add(electricalKettle2);
 
 		testManager.setHomeElectricalDevicesList(testList);
 	}
@@ -168,10 +168,5 @@ class HomeElectricalDevicesManagerImplementationTest {
 		Assertions.assertEquals("Elenberg", testList.get(3).getNameOfDevice());
 		Assertions.assertEquals("Electrolux", testList.get(4).getNameOfDevice());
 		Assertions.assertEquals("Bosch", testList.get(5).getNameOfDevice());
-	}
-	
-	@Test
-	public void testPrintList() {
-		
 	}
 }
