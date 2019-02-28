@@ -1,8 +1,8 @@
-package main.java.ua.lviv.iot.home.electrical.devices.managers;
+package ua.lviv.iot.home.electrical.devices.managers;
 
 import java.util.List;
 
-import main.java.ua.lviv.iot.home.electrical.devices.models.HomeElectricalDevice;
+import ua.lviv.iot.home.electrical.devices.models.HomeElectricalDevice;
 
 public interface IHomeElectricalDevicesManager {
 

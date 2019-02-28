@@ -1,4 +1,4 @@
-package main.java.ua.lviv.iot.home.electrical.devices.models;
+package ua.lviv.iot.home.electrical.devices.models;
 
 public enum Purpose {
 
