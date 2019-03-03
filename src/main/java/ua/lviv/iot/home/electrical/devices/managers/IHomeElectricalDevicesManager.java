@@ -15,6 +15,4 @@ public interface IHomeElectricalDevicesManager {
     List<HomeElectricalDevice> sortByPowerConsumption(boolean sortOrder);
 
     List<HomeElectricalDevice> sortByNameOfDevice(boolean sortOrder);
-
-    void printList(List<HomeElectricalDevice> homeElectricalDeviceList);
 }

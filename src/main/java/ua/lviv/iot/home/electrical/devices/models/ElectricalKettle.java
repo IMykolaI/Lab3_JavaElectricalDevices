@@ -9,11 +9,21 @@ public class ElectricalKettle extends HomeElectricalDevice {
     }
 
     public ElectricalKettle(final String pNameOfDevice, final boolean pIsTurnedOn, final double pPower,
-                            final double pVolume, final double pWeight, final Purpose pPurpose,
-                            final KettleBodyMatherial pBodyMatherial, final int pNumberOfWalls) {
+            final double pVolume, final double pWeight, final Purpose pPurpose,
+            final KettleBodyMatherial pBodyMatherial, final int pNumberOfWalls) {
         super(pNameOfDevice, pIsTurnedOn, pPower, pVolume, pWeight, pPurpose);
         this.bodyMatherial = pBodyMatherial;
         this.numberOfWalls = pNumberOfWalls;
+    }
+
+    public final String getHeaders() {
+
+        return super.getHeaders() + ", " + "Body matherial, " + "Number of walls";
+    }
+
+    public final String toCSV() {
+
+        return super.toCSV() + ", " + this.getBodyMatherial() + ", " + this.getNumberOfWalls();
     }
 
     public final KettleBodyMatherial getBodyMatherial() {
