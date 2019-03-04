@@ -9,11 +9,20 @@ public class Fridge extends HomeElectricalDevice {
     }
 
     public Fridge(final String pNameOfDevice, final boolean pIsTurnedOn, final double pPower, final double pVolume,
-                  final double pWeight, final Purpose pPurpose, final int pNumberOfCameras,
-                  final int pNumberOfShelves) {
+            final double pWeight, final Purpose pPurpose, final int pNumberOfCameras, final int pNumberOfShelves) {
         super(pNameOfDevice, pIsTurnedOn, pPower, pVolume, pWeight, pPurpose);
         this.numberOfCameras = pNumberOfCameras;
         this.numberOfShelves = pNumberOfShelves;
+    }
+
+    public final String getHeaders() {
+
+        return super.getHeaders() + ", " + "Number of cameras, " + "Number of shelves";
+    }
+
+    public final String toCSV() {
+
+        return super.toCSV() + ", " + this.getNumberOfCameras() + ", " + this.getNumberOfShelves();
     }
 
     public final int getNumberOfCameras() {

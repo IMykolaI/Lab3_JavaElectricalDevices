@@ -13,13 +13,24 @@ public abstract class HomeElectricalDevice {
     }
 
     public HomeElectricalDevice(final String pNameOfDevice, final boolean pIsTurnedOn, final double pPower,
-                                final double pVolume, final double pWeight, final Purpose pPurpose) {
+            final double pVolume, final double pWeight, final Purpose pPurpose) {
         this.nameOfDevice = pNameOfDevice;
         this.isTurnedOn = pIsTurnedOn;
         this.power = pPower;
         this.volume = pVolume;
         this.weight = pWeight;
         this.purpose = pPurpose;
+    }
+
+    public String getHeaders() {
+
+        return "Name of device, " + "Is turned on, " + "Power, " + "Volume, " + "Weight, " + "Purpose";
+    }
+
+    public String toCSV() {
+
+        return this.getNameOfDevice().toString() + ", " + this.getTurnedOn() + ", " + this.getPower() + ", "
+                + this.getVolume() + ", " + this.getWeight() + ", " + this.getPurpose().toString();
     }
 
     public final String getNameOfDevice() {
