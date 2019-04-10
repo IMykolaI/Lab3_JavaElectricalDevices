@@ -1,5 +1,8 @@
 package ua.lviv.iot.home.electrical.devices.models;
 
+import javax.persistence.Entity;
+
+@Entity
 public class ElectricalKettle extends HomeElectricalDevice {
 
     private KettleBodyMatherial bodyMatherial;
@@ -24,6 +27,11 @@ public class ElectricalKettle extends HomeElectricalDevice {
     public final String toCSV() {
 
         return super.toCSV() + ", " + this.getBodyMatherial() + ", " + this.getNumberOfWalls();
+    }
+
+    @Override
+    public final String toString() {
+        return super.toString() + "bodyMatherial=" + bodyMatherial + ", numberOfWalls=" + numberOfWalls + "]";
     }
 
     public final KettleBodyMatherial getBodyMatherial() {

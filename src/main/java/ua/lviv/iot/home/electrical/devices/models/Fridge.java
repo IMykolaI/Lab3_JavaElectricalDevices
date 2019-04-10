@@ -1,5 +1,8 @@
 package ua.lviv.iot.home.electrical.devices.models;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Fridge extends HomeElectricalDevice {
 
     private int numberOfCameras;
@@ -23,6 +26,11 @@ public class Fridge extends HomeElectricalDevice {
     public final String toCSV() {
 
         return super.toCSV() + ", " + this.getNumberOfCameras() + ", " + this.getNumberOfShelves();
+    }
+
+    @Override
+    public final String toString() {
+        return super.toString() + "numberOfCameras=" + numberOfCameras + ", numberOfShelves=" + numberOfShelves + "]";
     }
 
     public final int getNumberOfCameras() {
