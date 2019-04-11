@@ -1,12 +1,25 @@
 package ua.lviv.iot.home.electrical.devices.models;
 
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public abstract class HomeElectricalDevice {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private String nameOfDevice;
     private boolean isTurnedOn;
     private double power;
     private double volume;
     private double weight;
+    
+    @Enumerated(EnumType.STRING)
     private Purpose purpose;
 
     public HomeElectricalDevice() {
@@ -31,6 +44,20 @@ public abstract class HomeElectricalDevice {
 
         return this.getNameOfDevice().toString() + ", " + this.getTurnedOn() + ", " + this.getPower() + ", "
                 + this.getVolume() + ", " + this.getWeight() + ", " + this.getPurpose().toString();
+    }
+
+    @Override
+    public String toString() {
+        return "HomeElectricalDevice [nameOfDevice=" + nameOfDevice + ", isTurnedOn=" + isTurnedOn + ", power=" + power
+                + ", volume=" + volume + ", weight=" + weight + ", purpose=" + purpose + ", ";
+    }
+
+    public final Integer getId() {
+        return id;
+    }
+
+    public final void setId(final Integer pId) {
+        this.id = pId;
     }
 
     public final String getNameOfDevice() {

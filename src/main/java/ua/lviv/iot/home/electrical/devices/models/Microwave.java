@@ -1,7 +1,13 @@
 package ua.lviv.iot.home.electrical.devices.models;
 
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+
+@Entity
 public class Microwave extends HomeElectricalDevice {
 
+    @Enumerated(EnumType.STRING)
     private ControlType controlType;
     private double turntableDiameter;
 
@@ -24,6 +30,11 @@ public class Microwave extends HomeElectricalDevice {
     public final String toCSV() {
 
         return super.toCSV() + ", " + this.getControlType() + ", " + this.getTurntableDiametr();
+    }
+
+    @Override
+    public final String toString() {
+        return super.toString() + "controlType=" + controlType + ", turntableDiameter=" + turntableDiameter + "]";
     }
 
     public final ControlType getControlType() {
