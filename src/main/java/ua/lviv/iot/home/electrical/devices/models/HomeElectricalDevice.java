@@ -1,6 +1,8 @@
 package ua.lviv.iot.home.electrical.devices.models;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,6 +18,8 @@ public abstract class HomeElectricalDevice {
     private double power;
     private double volume;
     private double weight;
+    
+    @Enumerated(EnumType.STRING)
     private Purpose purpose;
 
     public HomeElectricalDevice() {

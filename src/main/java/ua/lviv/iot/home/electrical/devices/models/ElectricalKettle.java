@@ -1,10 +1,13 @@
 package ua.lviv.iot.home.electrical.devices.models;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 
 @Entity
 public class ElectricalKettle extends HomeElectricalDevice {
 
+    @Enumerated(EnumType.STRING)
     private KettleBodyMatherial bodyMatherial;
     private int numberOfWalls;
 
